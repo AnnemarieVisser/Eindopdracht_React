@@ -24,7 +24,7 @@ class SongOverview extends React.Component {
         const allSongs = this.state.songs.map(item => <SongList key={item.id} artist={item.artist} title={item.title} genre={item.genre} rating={item.rating} />)
         return (
             <div>
-                <SongForm addSong={this.addSong} />
+                <SongForm />
                 {allSongs}
             </div>
         )
