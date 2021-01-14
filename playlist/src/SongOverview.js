@@ -17,7 +17,6 @@ class SongOverview extends React.Component {
     }
 
     addSong = (song) => {
-        console.log(song);
         this.setState(prevState => {
             const songs = [...prevState.songs, song];
             return { songs };
@@ -35,7 +34,7 @@ class SongOverview extends React.Component {
                 <SongForm addSongToList={this.addSong} />
                 <SongSorting />
                 {allSongs}
-                <button type="submit" onClick={this.deleteAllSongs}>Delete All Songs</button>
+                <button id='deletebutton' type="submit" onClick={this.deleteAllSongs}>Delete All Songs</button>
             </div>
         )
     }
