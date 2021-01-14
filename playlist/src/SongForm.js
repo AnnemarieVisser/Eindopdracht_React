@@ -10,7 +10,6 @@ class SongForm extends React.Component {
             artist: "",
             genre: "",
             rating: ""
-
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -19,12 +18,13 @@ class SongForm extends React.Component {
 
     handleChange(event) {
         console.log(event.target.value);
-        const { name, value } = event.target
-        this.setState({ [name]: value })
+        const { name, value } = event.target;
+        this.setState({ [name]: value });
     }
 
     handleSubmit(event) {
         event.preventDefault();
+        this.props.addSongToList(this.state);
     }
 
     render() {
@@ -48,19 +48,21 @@ class SongForm extends React.Component {
                     />
 
                     <select name="genre" value={this.state.value} onChange={this.handleChange}>
-                        <option value="rock">Rock</option>
-                        <option value="metal">Metal</option>
-                        <option value="pop">Pop</option>
-                        <option value="classic">Classic</option>
-                        <option value="country">Country</option>
+                        <option value=" ">Select Genre</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Classic">Classic</option>
+                        <option value="Country">Country</option>
                     </select>
 
                     <select name="rating" value={this.state.value} onChange={this.handleChange}>
-                        <option value="one">One Star</option>
-                        <option value="two">Two Stars</option>
-                        <option value="three">Three Stars</option>
-                        <option value="four">Four Stars</option>
-                        <option value="five">Five Stars</option>
+                        <option value=" ">Select Rating</option>
+                        <option value="1">One Star</option>
+                        <option value="2">Two Stars</option>
+                        <option value="3">Three Stars</option>
+                        <option value="4">Four Stars</option>
+                        <option value="5">Five Stars</option>
                     </select>
                     <button type="submit">Add Song</button>
                 </form>

@@ -3,8 +3,17 @@ import React from 'react';
 function SongList(props) {
     return (
         <div>
-            <p>{props.title}, {props.artist}, {props.genre}, {props.rating}</p>
-
+            <table id='songlist'>
+                <tbody>
+                    <tr>
+                        <td>{props.title}</td>
+                        <td>{props.artist}</td>
+                        <td>{props.genre}</td>
+                        <td>{props.rating}</td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     )
 }
