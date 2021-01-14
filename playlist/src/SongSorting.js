@@ -10,7 +10,6 @@ function SongSorting() {
                     <td>Artist</td>
                     <td>Genre</td>
                     <td>Rating</td>
-                    <td>Remove from list</td>
                 </tbody>
             </table>
         </div>
