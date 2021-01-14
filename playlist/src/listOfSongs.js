@@ -1,24 +1,24 @@
 
 const listOfSongs = [
     {
-        title: "Title one",
-        artist: "Artist One",
+        title: "Unfinished Sympathy",
+        artist: "Massive Attack",
         genre: "Rock",
-        rating: "1",
+        rating: "4",
         id: 1
     },
     {
-        title: "Title Two",
-        artist: "Artist Two",
-        genre: "Rock",
-        rating: "1",
+        title: "Old Man",
+        artist: "Neil Young",
+        genre: "Country",
+        rating: "4",
         id: 2
     },
     {
-        title: "Title Three",
-        artist: "Artist Three",
-        genre: "Rock",
-        rating: "1",
+        title: "Ain't No Mountain High Enough",
+        artist: "Marvin Gaye",
+        genre: "Pop",
+        rating: "5",
         id: 3
     },
 

@@ -14,6 +14,7 @@ function App() {
   return (
     <Router>
       <div>
+        <Header />
         <nav>
           <ul>
             <li>
@@ -25,14 +26,9 @@ function App() {
           </ul>
         </nav>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/about">
             <About />
-          </Route>
-          <Route path="/SongOverview">
-            <SongOverview />
           </Route>
           <Route path="/">
             <Home />
@@ -46,7 +42,6 @@ function App() {
 function Home() {
   return (
     <div>
-      <Header />
       <SongOverview />
       <Footer />
     </div>

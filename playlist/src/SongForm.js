@@ -17,7 +17,6 @@ class SongForm extends React.Component {
     }
 
     handleChange(event) {
-        console.log(event.target.value);
         const { name, value } = event.target;
         this.setState({ [name]: value });
     }
@@ -64,7 +63,7 @@ class SongForm extends React.Component {
                         <option value="4">Four Stars</option>
                         <option value="5">Five Stars</option>
                     </select>
-                    <button type="submit">Add Song</button>
+                    <button type="submit" id="addsongbutton">Add Song</button>
                 </form>
 
             </div >
