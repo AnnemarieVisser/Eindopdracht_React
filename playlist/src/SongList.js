@@ -10,11 +10,10 @@ function SongList(props) {
                         <td>{props.artist}</td>
                         <td>{props.genre}</td>
                         <td>{props.rating}</td>
-                        <td><button>Delete</button></td>
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div >
     )
 }
 
