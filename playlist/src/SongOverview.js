@@ -3,6 +3,7 @@ import SongList from "./SongList";
 import listOfSongs from "./listOfSongs";
 import SongForm from "./SongForm";
 import SongSorting from "./SongSorting"
+import Buttons from "./Buttons"
 
 
 class SongOverview extends React.Component {
@@ -56,15 +57,7 @@ class SongOverview extends React.Component {
                 <SongForm addSongToList={this.addSong} />
                 <SongSorting />
                 {allSongs}
-                <button id='deletebutton' type="submit" onClick={this.deleteAllSongs}>Delete All Songs</button>
-                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongs('title')} > Sort songs by title (A-Z)</button>
-                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongsReversed('title')} > Sort songs by title (Z-A)</button>
-                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongs('artist')} > Sort songs by artist (A-Z)</button>
-                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongsReversed('artist')} > Sort songs by artist (Z-A)</button>
-                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongs('genre')} > Sort songs by genre (A-Z)</button>
-                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongsReversed('genre')} > Sort songs by genre (Z-A)</button>
-                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongs('rating')} > Sort songs by rating(lowest first)</button>
-                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongsReversed('rating')} > Sort songs by rating(highest first)</button>
+                <Buttons deleteAllSongs={this.deleteAllSongs} sortSongs={this.sortSongs} sortSongsReversed={this.sortSongsReversed} />
             </div>
         )
     }
