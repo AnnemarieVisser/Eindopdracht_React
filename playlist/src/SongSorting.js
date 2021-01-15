@@ -5,11 +5,12 @@ function SongSorting() {
         <div>
             <table id='songsorting'>
                 <tbody>
-                    <tr></tr>
-                    <td>Title</td>
-                    <td>Artist</td>
-                    <td>Genre</td>
-                    <td>Rating</td>
+                    <tr>
+                        <td>Title</td>
+                        <td>Artist</td>
+                        <td>Genre</td>
+                        <td>Rating</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
