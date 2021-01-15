@@ -21,6 +21,27 @@ const listOfSongs = [
         rating: "5",
         id: 3
     },
+    {
+        title: "Ain't No Mountain High Enough",
+        artist: "Marvin Gaye",
+        genre: "Country",
+        rating: "5",
+        id: 4
+    },
+    {
+        title: "Ain't No Mountain High Enough",
+        artist: "Marvin Gaye",
+        genre: "Pop",
+        rating: "5",
+        id: 5
+    },
+    {
+        title: "Ain't No Mountain High Enough",
+        artist: "Marvin Gaye",
+        genre: "Rock",
+        rating: "5",
+        id: 6
+    },
 
 
 ]
