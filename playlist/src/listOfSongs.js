@@ -4,7 +4,7 @@ const listOfSongs = [
         title: "Unfinished Sympathy",
         artist: "Massive Attack",
         genre: "Rock",
-        rating: "4",
+        rating: "3",
         id: 1
     },
     {
@@ -22,25 +22,33 @@ const listOfSongs = [
         id: 3
     },
     {
-        title: "Ain't No Mountain High Enough",
-        artist: "Marvin Gaye",
-        genre: "Country",
-        rating: "5",
+        title: "Toss A Coin To Your Witcher",
+        artist: "TW3",
+        genre: "Pop",
+        rating: "1",
         id: 4
     },
     {
-        title: "Ain't No Mountain High Enough",
-        artist: "Marvin Gaye",
+        title: "White Canvas",
+        artist: "A-Ha",
         genre: "Pop",
-        rating: "5",
+        rating: "4",
         id: 5
     },
     {
-        title: "Ain't No Mountain High Enough",
-        artist: "Marvin Gaye",
-        genre: "Rock",
+        title: "Tribute",
+        artist: "Tenacious D",
+        genre: "Metal",
         rating: "5",
         id: 6
+    },
+
+    {
+        title: "Ghost Love Score",
+        artist: "Nightwish",
+        genre: "Metal",
+        rating: "5",
+        id: 7
     },
 
 
