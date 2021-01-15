@@ -44,6 +44,18 @@ input, select {
   font-size: small;
 }
 
+.sortsongbutton, #deletebutton, #addsongbutton {
+    background-color: #560bad;
+    border: none;
+    color: white;
+    margin-top: 40px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 3px black;
+}
+
+
 #songsorting {
   width: 100%;
   background-color: #560bad;
@@ -55,13 +67,3 @@ input, select {
   background-color: #feeafa;
 }
 
-#deletebutton, #addsongbutton {
-  background-color: #560bad;
-  border: none;
-  color: white;
-  margin-top: 40px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  box-shadow: 0 0 3px black;
-}
