@@ -14,8 +14,8 @@ class SongOverview extends React.Component {
         }
         this.addSong = this.addSong.bind(this);
         this.deleteAllSongs = this.deleteAllSongs.bind(this);
-        this.sortSongsByGenre = this.sortSongsByGenre.bind(this);
-        this.sortSongsByRating = this.sortSongsByRating.bind(this);
+        this.sortSongs = this.sortSongs.bind(this);
+        this.sortSongsReversed = this.sortSongsReversed.bind(this);
     }
 
     addSong = (song) => {
@@ -29,9 +29,9 @@ class SongOverview extends React.Component {
         this.setState({ songs: [] });
     }
 
-    sortSongsByGenre() {
+    sortSongs(sortField) {
         this.setState(prevState => {
-            const sortedSongs = prevState.songs.sort((a, b) => (a.genre > b.genre) ? 1 : -1)
+            const sortedSongs = prevState.songs.sort((a, b) => (a[sortField] > b[sortField]) ? 1 : -1)
                 .map(song =>
                     <SongList key={song.id} artist={song.artist} title={song.title} genre={song.genre} rating={song.rating} deleteSong={this.deleteSong}
                     />);
@@ -39,9 +39,9 @@ class SongOverview extends React.Component {
         })
     }
 
-    sortSongsByRating() {
+    sortSongsReversed(sortField) {
         this.setState(prevState => {
-            const sortedSongs = prevState.songs.sort((a, b) => (a.rating > b.rating) ? 1 : -1)
+            const sortedSongs = prevState.songs.sort((a, b) => (b[sortField] > a[sortField]) ? 1 : -1)
                 .map(song =>
                     <SongList key={song.id} artist={song.artist} title={song.title} genre={song.genre} rating={song.rating} deleteSong={this.deleteSong}
                     />);
@@ -57,8 +57,14 @@ class SongOverview extends React.Component {
                 <SongSorting />
                 {allSongs}
                 <button id='deletebutton' type="submit" onClick={this.deleteAllSongs}>Delete All Songs</button>
-                <button className='sortsongbutton' type="submit" onClick={this.sortSongsByGenre} > Sort songs by genre</button>
-                <button className='sortsongbutton' type="submit" onClick={this.sortSongsByRating} > Sort songs by rating</button>
+                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongs('title')} > Sort songs by title (A-Z)</button>
+                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongsReversed('title')} > Sort songs by title (Z-A)</button>
+                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongs('artist')} > Sort songs by artist (A-Z)</button>
+                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongsReversed('artist')} > Sort songs by artist (Z-A)</button>
+                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongs('genre')} > Sort songs by genre (A-Z)</button>
+                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongsReversed('genre')} > Sort songs by genre (Z-A)</button>
+                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongs('rating')} > Sort songs by rating(lowest first)</button>
+                <button className='sortsongbutton' type="submit" onClick={() => this.sortSongsReversed('rating')} > Sort songs by rating(highest first)</button>
             </div>
         )
     }
