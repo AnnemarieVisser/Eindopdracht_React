@@ -1,1 +1,0 @@
-Final assignment for the React module of Winc Academy.
