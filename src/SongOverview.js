@@ -24,7 +24,7 @@ class SongOverview extends React.Component {
         this.setState(prevState => {
             const songs = [...prevState.songs];
             songs.push({
-                id: SongList.length + 1,
+                id: song.length + 1,
                 title: song.title,
                 artist: song.artist,
                 genre: song.genre,
@@ -38,33 +38,33 @@ class SongOverview extends React.Component {
         this.setState({ songs: [] });
     }
 
-     sortSongs(sortField) {
-    this.setState(prevState => {
-        const sortedSongs = prevState.songs.sort((a, b) => (a[sortField] > b[sortField]) ? 1 : -1)
-            .map(song =>
-                <SongList key={song.id} artist={song.artist} title={song.title} genre={song.genre} rating={song.rating} deleteSong={this.deleteSong}
-                />);
-        return { sortedSongs };
-    })
-}
+    sortSongs(sortField) {
+        this.setState(prevState => {
+            const sortedSongs = prevState.songs.sort((a, b) => (a[sortField] > b[sortField]) ? 1 : -1)
+                .map(song =>
+                    <SongList key={song.id} artist={song.artist} title={song.title} genre={song.genre} rating={song.rating} deleteSong={this.deleteSong}
+                    />);
+            return { sortedSongs };
+        })
+    }
 
-sortSongsReversed(sortField) {
-    this.setState(prevState => {
-        const sortedSongs = prevState.songs.sort((a, b) => (b[sortField] > a[sortField]) ? 1 : -1)
-            .map(song =>
-                <SongList key={song.id} artist={song.artist} title={song.title} genre={song.genre} rating={song.rating} deleteSong={this.deleteSong}
-                />);
-        return { sortedSongs };
-    })
-} 
+    sortSongsReversed(sortField) {
+        this.setState(prevState => {
+            const sortedSongs = prevState.songs.sort((a, b) => (b[sortField] > a[sortField]) ? 1 : -1)
+                .map(song =>
+                    <SongList key={song.id} artist={song.artist} title={song.title} genre={song.genre} rating={song.rating} deleteSong={this.deleteSong}
+                    />);
+            return { sortedSongs };
+        })
+    }
 
     render() {
-        const allSongs = this.state.songs.map(item => <SongList key={item.id} artist={item.artist} title={item.title} genre={item.genre} rating={item.rating} deleteSong={this.deleteSong} />) 
+        const allSongs = this.state.songs.map(item => <SongList key={item.id} artist={item.artist} title={item.title} genre={item.genre} rating={item.rating} deleteSong={this.deleteSong} />)
         return (
             <div>
                 <Buttons deleteAllSongs={this.deleteAllSongs} sortSongs={this.sortSongs} sortSongsReversed={this.sortSongsReversed} />
                 <SongForm addSongToList={this.addSong} />
-                <SongListHeader allSongs={allSongs} />  
+                <SongListHeader allSongs={allSongs} />
             </div>
         )
     }
