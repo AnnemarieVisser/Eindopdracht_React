@@ -62,10 +62,9 @@ sortSongsReversed(sortField) {
         const allSongs = this.state.songs.map(item => <SongList key={item.id} artist={item.artist} title={item.title} genre={item.genre} rating={item.rating} deleteSong={this.deleteSong} />) 
         return (
             <div>
-                <SongForm addSongToList={this.addSong} />
-                <SongListHeader allSongs={allSongs} />
-
                 <Buttons deleteAllSongs={this.deleteAllSongs} sortSongs={this.sortSongs} sortSongsReversed={this.sortSongsReversed} />
+                <SongForm addSongToList={this.addSong} />
+                <SongListHeader allSongs={allSongs} />  
             </div>
         )
     }

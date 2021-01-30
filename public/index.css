@@ -1,9 +1,10 @@
 body {
   margin: 0;
   font-family: 'Alegreya Sans SC', sans-serif;
-  background-color: #3c6e71;
+  background-color: #faf9f9;
   color: #353535;
   text-align: center;
+  height: 100%;
 }
 
 a {
@@ -21,7 +22,7 @@ ul {
 }
 
 td {
-  border: 1px solid #ddd;
+  border: 1px solid black;
   padding: 8px;
   width: 200px;
 }
@@ -30,35 +31,50 @@ input, select {
   width: 200px;
   margin: 20px;
   padding: 10px;
-  background-color: #3c6e71;
+  background: #00f5d4;
+  box-shadow: 0 0 2px black;
+  border-radius: 5px;
   color: black;
+  border: none;
 }
 
-.header {
-  background-color: #3c6e71;
-  padding: 20px;
+.nav{
+  background: rgb(0,187,249);
+  background: linear-gradient(180deg, rgba(0,187,249,1) 0%, rgba(250,249,249,1) 100%);
+  padding: 5px;
 }
 
-.footer {
-  background-color: #3c6e71;
-  font-size: small;
+.nav_h1{
+  font-size: 40px;
+}
+
+.nav_link{
+  border: 3px dotted #00f5d4;
+  font-size: 30px;
+  display: inline-block;
+  padding: 5px;
+  margin: 10px;
 }
 
 .buttonswrapper{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 900px;
+  margin: auto;
 }
 
-.sortsongbutton, #deletebutton, #addsongbutton {
-    background-color: #353535;
+.sortsongbutton, #addsongbutton {
+    background-color: #fee440;
     border: none;
-    color: white;
+    color: #9b5de5;
     margin-top: 40px;
+    margin-bottom: 10px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     box-shadow: 0 0 3px black;
+    width:100px;
 }
 
 .sortsongbutton:hover{
@@ -66,10 +82,35 @@ input, select {
   transition: all 150ms ease-in;
 }
 
-#songsorting {
+.rev{
+  background-color: #ffff3f;
+}
+
+.rev:hover{
+  transform: scale(0.9);
+  transition: all 150ms ease-in;  
+}
+
+.footer {
+  background: rgb(0,187,249);
+  background: linear-gradient(0deg, rgba(0,187,249,1) 0%, rgba(250,249,249,1) 100%);
+  margin-bottom: 0;
+  height: 50px;
+}
+
+.listofsongs {
   width: 100%;
-  background-color: #353535;
-  color: #edf6f9;
+  background-color: #F58ECC;
+  color: #353535;
+}
+
+.subjects{
+  background-color:#9b5de5;
+}
+
+#deletebutton {
+  background-color: #f15bb5;
+  color: black;
 }
 
 #songlist{
@@ -77,3 +118,6 @@ input, select {
   background-color: #feeafa;
 }
 
+.aboutdiv{
+  border: 2px solid black;
+}
