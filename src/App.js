@@ -5,23 +5,23 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Navigation } from "./Navigation";
+import { Navigation } from "./components/Navigation";
 import Footer from "./Footer";
 
 function App() {
 
   return (
     <Router>
-      <Navigation />        
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-            <SongOverview />
-          </Route>
-        </Switch>
-        <Footer />
+      <Navigation />
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/">
+          <SongOverview />
+        </Route>
+      </Switch>
+      <Footer />
     </Router>
   );
 }
