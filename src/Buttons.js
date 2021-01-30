@@ -5,10 +5,10 @@ function Buttons(props) {
         <div className="buttonswrapper">
             <button id='deletebutton' type="submit" onClick={() => props.deleteAllSongs()}>Delete All Songs</button>
 
-{/*             <button className='sortsongbutton' type="submit" onClick={() => props.sortSongs('title')}> Sort songs by title (A-Z)</button>
+    {/*                 <button className='sortsongbutton' type="submit" onClick={() => props.sortSongs('title')}> Sort songs by title (A-Z)</button>
             <button className='sortsongbutton' type="submit" onClick={() => props.sortSongsReversed('title')} > Sort songs by title (Z-A)</button>
 
-            <button className='sortsongbutton' type="submit" onClick={() => props.sortSongs('title')} > Sort songs by artist (A-Z)</button>
+<button className='sortsongbutton' type="submit" onClick={() => props.sortSongs('title')} > Sort songs by artist (A-Z)</button>
             <button className='sortsongbutton' type="submit" onClick={() => props.sortSongsReversed('title')} > Sort songs by artist (Z-A)</button>
 
             <button className='sortsongbutton' type="submit" onClick={() => props.sortSongs('title')} > Sort songs by genre (A-Z)</button>

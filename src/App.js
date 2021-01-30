@@ -1,5 +1,5 @@
 import About from "./About";
-import Home from "./Home";
+import SongOverview from "./SongOverview";
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,7 +27,7 @@ function App() {
             <About />
           </Route>
           <Route path="/">
-            <Home />
+            <SongOverview />
           </Route>
         </Switch>
     </Router>
