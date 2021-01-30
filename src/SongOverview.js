@@ -24,7 +24,7 @@ class SongOverview extends React.Component {
         this.setState(prevState => {
             const songs = [...prevState.songs];
             songs.push({
-                id: song.length + 1,
+                id: song.title,
                 title: song.title,
                 artist: song.artist,
                 genre: song.genre,
@@ -40,7 +40,7 @@ class SongOverview extends React.Component {
 
     sortSongs(sortField) {
         this.setState(prevState => {
-            const sortedSongs = prevState.songs.sort((a, b) => (a[sortField] > b[sortField]) ? 1 : -1)
+            const sortedSongs = prevState.songs.sort((a, b) => (a[sortField].toUpperCase() > b[sortField].toUpperCase()) ? 1 : -1)
                 .map(song =>
                     <SongList key={song.id} artist={song.artist} title={song.title} genre={song.genre} rating={song.rating} deleteSong={this.deleteSong}
                     />);
@@ -50,7 +50,7 @@ class SongOverview extends React.Component {
 
     sortSongsReversed(sortField) {
         this.setState(prevState => {
-            const sortedSongs = prevState.songs.sort((a, b) => (b[sortField] > a[sortField]) ? 1 : -1)
+            const sortedSongs = prevState.songs.sort((a, b) => (b[sortField].toUpperCase() > a[sortField].toUpperCase()) ? 1 : -1)
                 .map(song =>
                     <SongList key={song.id} artist={song.artist} title={song.title} genre={song.genre} rating={song.rating} deleteSong={this.deleteSong}
                     />);
