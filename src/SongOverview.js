@@ -16,6 +16,8 @@ class SongOverview extends React.Component {
 
         this.addSong = this.addSong.bind(this);
         this.deleteAllSongs = this.deleteAllSongs.bind(this);
+        this.sortSongs = this.sortSongs.bind(this);
+        this.sortSongsReversed = this.sortSongsReversed.bind(this);
     }
 
     addSong = (song) => {
